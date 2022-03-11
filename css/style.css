@@ -7,7 +7,7 @@
    align-items: center;
    justify-content: space-between;
 }
-header{
+header {
    display: flex;
    height: 100px;
    background-color: #128C7E;
@@ -19,9 +19,9 @@ header{
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
 .menu-main {
   list-style: none;
-  margin:0 0 0 55px;
+  /* margin:0 0 0 55px; */
   padding: 20px 0 5px;
-  text-align: center;
+  /* text-align: left; */
 }
 .menu-main li {display: inline-block;}
 .menu-main li:after {
@@ -353,6 +353,7 @@ footer{
   align-items: center;
   justify-content: center;
   color: #fff;
+  z-index: 3;
 }
 footer a:hover {
   color: #dacd20;
@@ -438,8 +439,11 @@ footer .fa{
 
 
 @media (max-width: 480px) {
-  main{
-    background-color: #16D9E3;
+  .logo img {
+    width: 90%;
+  }
+  .info{
+    padding: 0 20px 0 0;
   }
   .info h1 {
     font-family: 'Ubuntu Condensed', sans-serif;
@@ -462,8 +466,11 @@ footer .fa{
     font-size: 10px;
     text-align: right;
   }
+  .field{
+    width: 200px;
+  }
   .img img{
-    width: 120px;
+    width: 140px;
   }
   .main-container{
     padding-bottom: 0px;
@@ -490,7 +497,7 @@ footer .fa{
 
 @media only screen and (min-width : 480px) and (max-width : 768px)  {
   .main-container{
-    margin-top: -50px;
+    margin-top: 20px;
     padding-bottom: 0px;
     flex-direction: column-reverse;
   }
@@ -520,7 +527,7 @@ footer .fa{
       flex-direction: column;
     }
     .main-container{
-      margin-top: -50px;
+      margin-top: 20px;
       padding-bottom: 0px;
       flex-direction: column-reverse
     }
@@ -529,11 +536,95 @@ footer .fa{
     }
     .info-wrapper{
       width: 100%;
-      margin-right: 50px;
+      margin-right: 20px;
     }
     .number-wrapper{
       margin-top: -6%;
-      margin-left: -28%;
+      margin-left: -38%;
     }
 }
 
+
+@media only screen and (max-width: 992px) {
+  .site-pusher,
+  .site-container {
+    height: 100%;
+  }
+
+  .site-container {
+    overflow: hidden;
+  }
+  
+  .site-pusher {
+    transition-duration: 0.3s;
+    transform: translateX(0px);
+ 
+  }
+  
+  .site-content {
+    position: absolute;
+    top: 66px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .header {
+    position: static;
+  }
+  
+  .header__icon {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50px;
+    height: 66px;
+    cursor: pointer;
+  }
+  .header__icon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1rem;
+    height: 0;
+    top: 16px;
+    left: 15px;
+    z-index: 6;
+    box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
+  }
+
+  .menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #128C7E;
+    /*    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;*/
+    width: 250px;
+    transform: translateX(250px);
+  }
+  .menu a {
+    display: block;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 1px solid #59e7d74f;
+  }
+  
+  .with--sidebar .site-pusher {
+    transform: translateX(-250px);
+  }
+  .with--sidebar .site-cache {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}

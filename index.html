@@ -21,21 +21,24 @@
    <title>WhatsApp sender</title>
 </head>
 <body>
-   <header>
-      <div class="conteiner">
-         <div class="logo">
-            <img src="/img/whatsapp-logo.svg">
+   <div class="site-container">
+      <div class="site-pusher">
+      <header class="header">
+         <div class="conteiner">
+            <div class="logo">
+               <img src="/img/whatsapp-logo.svg">
+            </div>
+            <a href="#" class="header__icon" id="header__icon"></a>
+            <nav class="menu menu-main">
+               <a href="#" id="favorite"><i class="fa fa-star"></i>в Закладки</a>
+               <a href="/" class="current"><i class="fa fa-share"></i>Sender</a>
+               <a href="https://web.whatsapp.com/" target="blank"><i class="fa fa-whatsapp"></i>WhatsApp Web</a>
+               <a href="https://www.whatsapp.com/download" target="blank"><i class="fa fa-download"></i>Скачать</a>
+               <a href="https://webstep.kz" target="blank"><i class="fa fa-code"></i>Разработчик</a>
+            </nav>
          </div>
-         <ul class="menu-main">
-            <li><a href="#" id="favorite"><i class="fa fa-star"></i>в Закладки</a></li>
-            <li><a href="/" class="current"><i class="fa fa-share"></i>Sender</a></li>
-            <li><a href="https://web.whatsapp.com/" target="blank"><i class="fa fa-whatsapp"></i>WhatsApp Web</a></li>
-            <li><a href="https://www.whatsapp.com/download" target="blank"><i class="fa fa-download"></i>Скачать</a></li>
-            <li><a href="https://webstep.kz" target="blank"><i class="fa fa-code"></i>Разработчик</a></li>
-          </ul>
-      </div>
-   </header>
-   <main>
+       </header>
+   <main >
       <div class="main-container">
          <div class="number-wrapper">
 
@@ -63,7 +66,7 @@
          </div>
          <div class="info-wrapper">
             <div class="info">
-               <h1>Удобно. Безопасно.Надёжно.</h1>
+               <h1>Удобно. Безопасно. Надёжно.</h1>
                <p>Занесите не знакомый вам номер в поле перейдите в чат WhatsApp с пользователем, не сохраняя номер в свой мобильный телефон.</p>
                <h3>*Мы не сохраняем персональные данные, данная система созданна исключительно для личного удобства и отсутствия подобных сервисов</h3>
             </div>
@@ -76,10 +79,13 @@
    <footer class="sticky-footer bg-white">
       <div class="container my-auto">
          <div class="copyright text-center my-auto">
-            <span>Copyright © WebStep.kz 2021 | Made with <i class="fa fa-heart fa-fw text-danger"></i>by <a target="_blank" href="https://WebStep.kz">Xassan Mukhamedjanov</a></span>
+            <span>Copyright © WebStep.kz 2022 </span>
          </div>
       </div>
    </footer>
+   <div class="site-cache" id="site-cache"></div>
+</div> <!-- END site-pusher -->
+</div> <!-- END site-container -->
    <script src="/js/script.js"></script>
    <script src="/js/intlTelInput.js"></script>
   <script>
@@ -108,5 +114,6 @@
       utilsScript: "js/utils.js",
     });
   </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </body>
 </html>

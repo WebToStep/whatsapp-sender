@@ -6,24 +6,45 @@ window.addEventListener('DOMContentLoaded', () => {
   const selector = document.querySelector('.iti__selected-dial-code');
   const favorite = document.querySelector('#favorite');
   const menu = document.querySelector('.menu-main');
-  const li = menu.querySelectorAll('li');
+  const BurgerIcon = document.querySelector('#header__icon');
+  const siteCache = document.querySelector('#site-cache');
+  const a = menu.querySelectorAll('a');
 
   function isAN(value) {
     return /^[-]?\d+$/.test(value);
   }
+  
+  
   document.addEventListener('click', (e) => {
-    if (e.target.parentNode.parentNode.classList.contains('menu-main')) {
-      li.forEach(e => e.lastChild.classList.remove('current'))
-      e.target.classList.add('current');
+    // бургер меню
+    if(e.target === BurgerIcon){
+      e.preventDefault();
+      document.body.classList.toggle("with--sidebar");
     }
+    if(e.target === siteCache){
+      e.preventDefault();
+      document.body.classList.remove("with--sidebar");
+    }
+    // бургер меню
+    // if (e.target.classList.contains('current')) {
+    //   e.preventDefault();
+    //   a.forEach(e => console.log(e.target));
+    //   // a.forEach(e => e.classList.remove('current'))
+    //   console.log(e.target.classList);
+    //   e.target.classList.add('current');
+    // }
+   
+    // добавить в избранное
     if(e.target === favorite){
       add_favorite(this)
     }
+    // при наборе номера эффект
     if (e.target.className === 'field') {
       main.classList.add('is-focus');
     } else {
       main.classList.remove('is-focus');
     }
+    // отправляем на ватсап
     if (e.target.className === 'btn-submit') {
       e.preventDefault();
       window.open(`https://wa.me/${selector.innerText + input.value}`);
@@ -74,4 +95,7 @@ window.addEventListener('DOMContentLoaded', () => {
     } 
     return false; 
   }
+ 
+
+
 });
