@@ -13,9 +13,10 @@
    <meta name="msapplication-TileColor" content="#da532c">
    <meta name="theme-color" content="#ffffff">
    <!-- styles -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
    <link rel="stylesheet" href="/css/reset.css">
    <link rel="stylesheet" href="/css/intlTelInput.css">
-   <link rel="stylesheet" href="/css/demo.css">
    <link rel="stylesheet" href="/css/style.css">
    <title>WhatsApp sender</title>
 </head>
@@ -26,32 +27,59 @@
             <img src="/img/whatsapp-logo.svg">
          </div>
          <ul class="menu-main">
-            <li><a href="#" id="favorite">Добавить в Избранное</a></li>
-            <li><a href="#" class="current">Work</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" id="favorite"><i class="fa fa-star"></i>в Закладки</a></li>
+            <li><a href="/" class="current"><i class="fa fa-share"></i>Sender</a></li>
+            <li><a href="https://web.whatsapp.com/" target="blank"><i class="fa fa-whatsapp"></i>WhatsApp Web</a></li>
+            <li><a href="https://www.whatsapp.com/download" target="blank"><i class="fa fa-download"></i>Скачать</a></li>
+            <li><a href="https://webstep.kz" target="blank"><i class="fa fa-code"></i>Разработчик</a></li>
           </ul>
       </div>
    </header>
    <main>
-      <div class="container">
+      <div class="main-container">
          <div class="number-wrapper">
 
             <div class="title-container">
-               <h1 class="title">Мы не используем персональные данные</h1>
+               <p class="title">Мы не используем персональные данные</p>
              </div>
 
-             <form>
+             <form class="form-wrapper">
                <input id="phone" name="phone" type="tel" class="field">
                <button type="submit" class="btn-submit">Начать чат</button>
             </form>
-
+            <!-- schare -->
+            <div class="schare">
+               <h2>Поделиться сервисом</h2>
+               <div class="social">
+                  <label for="soc" class="social-btn"><i class="fa fa-share-alt"></i></label>
+                  <input type="checkbox" id="soc">
+                  <a href="https://www.facebook.com/sharer.php?src=sp&amp;u=https%3A%2F%2Fwebstep.kz%2Ftest%2F1%2F&amp;title=помошник начала чата в Whatsapp" class="social-link facebook"><i class="fa fa-facebook-f"></i></a>
+                  <a href="https://api.whatsapp.com/send?text= помошник начала чата в Whatsapp" class="social-link whatsApp"><i class="fa fa-whatsapp"></i></a>
+                  <a href="https://t.me/share/url?url=https%3A%2F%2Fwebstep.kz%2Ftest%2F1&amp;text=помошник начала чата в Whatsapp" class="social-link telegram"><i class="fa fa-telegram"></i></a>
+                </div>
+            </div>
+            
+            <!-- schare -->
          </div>
-         <div class="info-wrapper"></div>
+         <div class="info-wrapper">
+            <div class="info">
+               <h1>Удобно. Безопасно.Надёжно.</h1>
+               <p>Занесите не знакомый вам номер в поле перейдите в чат WhatsApp с пользователем, не сохраняя номер в свой мобильный телефон.</p>
+               <h3>*Мы не сохраняем персональные данные, данная система созданна исключительно для личного удобства и отсутствия подобных сервисов</h3>
+            </div>
+            <div class="img">
+               <img src="./img/whats-phone.png">
+            </div>
+         </div>
       </div>
    </main>
-   <footer></footer>
+   <footer class="sticky-footer bg-white">
+      <div class="container my-auto">
+         <div class="copyright text-center my-auto">
+            <span>Copyright © WebStep.kz 2021 | Made with <i class="fa fa-heart fa-fw text-danger"></i>by <a target="_blank" href="https://WebStep.kz">Xassan Mukhamedjanov</a></span>
+         </div>
+      </div>
+   </footer>
    <script src="/js/script.js"></script>
    <script src="/js/intlTelInput.js"></script>
   <script>
