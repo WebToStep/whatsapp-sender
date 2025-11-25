@@ -1,4 +1,19 @@
 /* Хедер */
+h1 {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: left;
+  line-height:28px;
+}
+h2 {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: right;
+  line-height:28px;
+}
+
 .conteiner{
    padding:15px;
    width: 1100px;
@@ -85,25 +100,30 @@ header .fa-star{
 main {
   font-family: "Montserrat", "Helevtica", sans-serif;
   position: relative;
-  width: 100%;
-  min-height: 100vh;
+  padding: 5% 3%;
+  min-height: 90vh;
   background-color: #fafaef;
   color: #4b4848;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
   transition: background-color 1.25s ease-in-out;
+}
+main .desk {
+  max-width: 60%;
+  padding-top: 15px;
+  text-align: justify;
 }
 main.is-focus {
   background-color: #bcf7bcad;
 }
 .main-container{
   padding:15px;
-  width: 1100px;
+  max-width: 800px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: -80px;
   justify-content: space-between;
 }
 
@@ -273,15 +293,8 @@ main.is-focus {
   width: 60%;
 }
 .info{
-  width: 40%;
+  width: 80%;
   padding: 30px;
-}
-.info h1{
-  font-family: 'Ubuntu Condensed', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  text-align: right;
-  line-height:28px;
 }
 .info p{
   font-family: 'Ubuntu Condensed', sans-serif;
@@ -291,8 +304,9 @@ main.is-focus {
   line-height:22px;
   margin-top: 10px;;
 }
-.info h3{
-  padding-top: 20px;
+h3{
+  padding-right: 20px;
+  max-width: 80%;
   font-size: 12px;
   text-align: right;
 }
@@ -447,7 +461,7 @@ footer .fa{
   .info{
     padding: 0 20px 0 0;
   }
-  .info h1 {
+  h1 {
     font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 18px;
     font-weight: 700;
